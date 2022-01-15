@@ -70,7 +70,7 @@
                 </div>
               </div>
             </div>
-            <template v-for="(img) in temp.imagesUrl" :key="i">
+            <template v-for="img in temp.imagesUrl" :key="img">
               <img v-if="img" :src="img" :alt="temp.title" class="images m-2">
             </template>
           </template>

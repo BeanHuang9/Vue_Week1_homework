@@ -40,7 +40,7 @@
                   {{ item.price }}
                 </td>
                 <td width="150">
-                  <span class="text-success" v-if="item.is_enabled === 1">啟用</span>
+                  <span class="text-success" v-if="item.is_enabled">啟用</span>
                   <span v-else>未啟用</span>
                 </td>
                 <td width="120">
@@ -70,7 +70,7 @@
                 </div>
               </div>
             </div>
-            <template v-for="img in temp.imagesUrl" :key="img">
+            <template v-for="(img,i) in temp.imagesUrl" :key="i">
               <img v-if="img" :src="img" :alt="temp.title" class="images m-2">
             </template>
           </template>
